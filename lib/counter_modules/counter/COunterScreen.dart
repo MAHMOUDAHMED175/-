@@ -10,7 +10,9 @@ import 'cubit/states.dart';
 
 class CounterScreen extends StatelessWidget {
   int counter = 1;
-
+//fdwfdf
+  //def
+  //def
   // 1. constructor
   // 2. init state
   // 3. build
@@ -33,38 +35,42 @@ class CounterScreen extends StatelessWidget {
               ),
             ),
             body: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      CounterCubit.get(context).minus();
-                    },
-                    child: Text(
-                      'MINUS',
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20.0,
-                    ),
-                    child: Text(
-                      '${CounterCubit.get(context).counter}',
-                      style: TextStyle(
-                        fontSize: 50.0,
-                        fontWeight: FontWeight.w900,
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: TextButton(
+                        onPressed: () {
+                          CounterCubit.get(context).minus();
+                        },
+                        child: Text(
+                          'MINUS',
+                        ),
                       ),
                     ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      CounterCubit.get(context).plus();
-                    },
-                    child: Text(
-                      'PLUS',
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20.0,
+                      ),
+                      child: Text(
+                        '${CounterCubit.get(context).counter}',
+                        style: TextStyle(
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                    TextButton(
+                      onPressed: () {
+                        CounterCubit.get(context).plus();
+                      },
+                      child: Text(
+                        'PLUS',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );
